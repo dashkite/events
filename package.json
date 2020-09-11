@@ -18,11 +18,13 @@
   "license": "SEE LICENSE IN LICENSE.md",
   "author": "Dan Yoder",
   "main": "build/npm/src/index.js",
+  "main:coffee": "src/index.coffee",
   "directories": {
     "test": "test"
   },
   "files": [
-    "./build"
+    "src",
+    "build/npm/src"
   ],
   "scripts": {
     "test": "p9k test"
