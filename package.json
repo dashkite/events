@@ -1,6 +1,6 @@
 {
   "name": "@dashkite/events",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A Browser-friendly Node-like interface for dispatching and handling events.",
   "keywords": [
     "events",
