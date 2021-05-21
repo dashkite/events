@@ -1,4 +1,7 @@
 import EventTarget from "@ungap/event-target"
+globalThis.CustomEvent ?= do ->
+  class CustomEvent extends Event
+    constructor: (name, {@detail} = {}) -> super name
 
 # TODO where does this belong?
 class Events
