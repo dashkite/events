@@ -17,21 +17,31 @@
   },
   "license": "SEE LICENSE IN LICENSE.md",
   "author": "Dan Yoder",
-  "main": "build/npm/src/index.js",
-  "directories": {
-    "test": "test"
+  "main": "build/node/src/index.js",
+  "main:coffee": "src/index.coffee",
+  "exports": {
+    ".": {
+      "import": "./build/import/src/index.js",
+      "node": "./build/node/src/index.js"
+    }
   },
   "files": [
-    "./build"
+    "build/import/src",
+    "build/node/src",
+    "src"
   ],
   "scripts": {
-    "test": "p9k test"
-  },
-  "devDependencies": {
-    "panda-9000": "^5.0.2",
-    "panda-builder": "^4.0.13"
+    "test": "genie test"
   },
   "dependencies": {
-    "@ungap/event-target": "^0.1.0"
+    "@ungap/event-target": "^0.2.2"
+  },
+  "devDependencies": {
+    "@dashkite/genie": "^0.3.3",
+    "@dashkite/genie-presets": "^0.1.5",
+    "@dashkite/joy": "^0.3.3",
+    "@dashkite/masonry": "^0.10.3",
+    "amen": "^3.0.0",
+    "panda-quill": "^5.0.0"
   }
 }
